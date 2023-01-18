@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RestaurantViewController: UIViewController {
     
@@ -19,7 +20,7 @@ class RestaurantViewController: UIViewController {
         restaurantTableView.dataSource = self
         restaurantTableView.delegate = self
         viewModel.getrestaurantDetails(){
-            print(self.viewModel.restaurantData)
+//            print(self.viewModel.restaurantData)
             self.restaurantTableView.reloadData()
             
         }
@@ -52,11 +53,14 @@ extension RestaurantViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = restaurantTableView.dequeueReusableCell(withIdentifier: k.Cell.restaurantTableViewCell, for: indexPath) as! RestaurantTableViewCell
-        if let imageString = viewModel.restaurantData[indexPath.row].logo{
-            cell.logoImageView.image = UIImage(contentsOfFile: viewModel.restaurantData[indexPath.row].logo ?? "")
-        }else{
-            print("Image String not available")
-        }
+   
+        let url = URL(string: viewModel.restaurantData[indexPath.row].logo!)
+            // this downloads the image asynchronously if it's not cached yet
+            cell.logoImageView.kf.setImage(with: url)
+        
+//        }else{
+//            print("Image String not available")
+//        }
         cell.nameLbl.text = viewModel.restaurantData[indexPath.row].name
         cell.typeLbl.text = viewModel.restaurantData[indexPath.row].type
         cell.contactLbl.text = viewModel.restaurantData[indexPath.row].phoneNumber

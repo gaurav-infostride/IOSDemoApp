@@ -19,7 +19,7 @@ class WelcomeViewController: UIViewController {
         var charIndex = 0.0
         for i in welcomeText{
             Timer.scheduledTimer(withTimeInterval: 1 * charIndex, repeats: false){(timer) in
-                self.welcomeLbl.text?.append(i)
+//                self.welcomeLbl.text?.append(i)
                 
             }
             charIndex = +1

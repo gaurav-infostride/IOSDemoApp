@@ -24,11 +24,15 @@
 		5E0D9B39297596DF00CE562B /* LoginData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0D9B37297596DF00CE562B /* LoginData+CoreDataClass.swift */; };
 		5E0D9B3A297596DF00CE562B /* LoginData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0D9B38297596DF00CE562B /* LoginData+CoreDataProperties.swift */; };
 		5E0D9B3C2975975400CE562B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0D9B3B2975975400CE562B /* SignUpViewController.swift */; };
+		5E67C7282978966600030584 /* TaskData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67C7262978966600030584 /* TaskData+CoreDataClass.swift */; };
+		5E67C7292978966600030584 /* TaskData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67C7272978966600030584 /* TaskData+CoreDataProperties.swift */; };
 		5E6B0DEA2975BD7600EB7023 /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B0DE92975BD7600EB7023 /* UIViewController+Ex.swift */; };
 		5E6B0DED2975E1D000EB7023 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B0DEC2975E1D000EB7023 /* WelcomeViewController.swift */; };
+		7FE39E8B75714DD17F2E215D /* Pods_IOSDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F70F2363927547F25D6052 /* Pods_IOSDemoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		297B626B01ACD7CD29EB821B /* Pods-IOSDemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSDemoApp.release.xcconfig"; path = "Target Support Files/Pods-IOSDemoApp/Pods-IOSDemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		5E02E9A12976B35E00049146 /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
 		5E02E9A52976B65700049146 /* RestaurantViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewModel.swift; sourceTree = "<group>"; };
 		5E02E9A72976B67B00049146 /* RestaurantModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantModel.swift; sourceTree = "<group>"; };
@@ -48,8 +52,12 @@
 		5E0D9B37297596DF00CE562B /* LoginData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5E0D9B38297596DF00CE562B /* LoginData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5E0D9B3B2975975400CE562B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5E67C7262978966600030584 /* TaskData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5E67C7272978966600030584 /* TaskData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5E6B0DE92975BD7600EB7023 /* UIViewController+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
 		5E6B0DEC2975E1D000EB7023 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		63F70F2363927547F25D6052 /* Pods_IOSDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E44C63B590F9A758E2427755 /* Pods-IOSDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-IOSDemoApp/Pods-IOSDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E0D9B322975937300CE562B /* CoreData.framework in Frameworks */,
+				7FE39E8B75714DD17F2E215D /* Pods_IOSDemoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +77,6 @@
 			isa = PBXGroup;
 			children = (
 				5E02E9A72976B67B00049146 /* RestaurantModel.swift */,
-				5E02E9AC2976B6D700049146 /* Database.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -95,6 +103,7 @@
 				5E0D9B0D29758C3300CE562B /* IOSDemoApp */,
 				5E0D9B0C29758C3300CE562B /* Products */,
 				5E0D9B302975937200CE562B /* Frameworks */,
+				863EED6B235A343454169789 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				5E0D9B2929758F4200CE562B /* Helper.swift */,
+				5E02E9AC2976B6D700049146 /* Database.swift */,
 				5E0D9B2F297591EA00CE562B /* CoreData */,
 				5E6B0DEB2975BD7E00EB7023 /* Extension */,
 				5E0D9B33297593E100CE562B /* Delegate */,
@@ -129,6 +139,8 @@
 		5E0D9B2F297591EA00CE562B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				5E67C7262978966600030584 /* TaskData+CoreDataClass.swift */,
+				5E67C7272978966600030584 /* TaskData+CoreDataProperties.swift */,
 				5E0D9B37297596DF00CE562B /* LoginData+CoreDataClass.swift */,
 				5E0D9B38297596DF00CE562B /* LoginData+CoreDataProperties.swift */,
 			);
@@ -140,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				5E0D9B312975937300CE562B /* CoreData.framework */,
+				63F70F2363927547F25D6052 /* Pods_IOSDemoApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -173,6 +186,16 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		863EED6B235A343454169789 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E44C63B590F9A758E2427755 /* Pods-IOSDemoApp.debug.xcconfig */,
+				297B626B01ACD7CD29EB821B /* Pods-IOSDemoApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5E0D9B2229758C3400CE562B /* Build configuration list for PBXNativeTarget "IOSDemoApp" */;
 			buildPhases = (
+				2AF40BE93D0378D1A0F1C8FF /* [CP] Check Pods Manifest.lock */,
 				5E0D9B0729758C3300CE562B /* Sources */,
 				5E0D9B0829758C3300CE562B /* Frameworks */,
 				5E0D9B0929758C3300CE562B /* Resources */,
+				30A861E33C338DA6A72BC5B0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -239,6 +264,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2AF40BE93D0378D1A0F1C8FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IOSDemoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30A861E33C338DA6A72BC5B0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IOSDemoApp/Pods-IOSDemoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IOSDemoApp/Pods-IOSDemoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IOSDemoApp/Pods-IOSDemoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5E0D9B0729758C3300CE562B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -252,7 +319,9 @@
 				5E0D9B1929758C3300CE562B /* IOSDemoApp.xcdatamodeld in Sources */,
 				5E0D9B3C2975975400CE562B /* SignUpViewController.swift in Sources */,
 				5E0D9B0F29758C3300CE562B /* AppDelegate.swift in Sources */,
+				5E67C7282978966600030584 /* TaskData+CoreDataClass.swift in Sources */,
 				5E0D9B1129758C3300CE562B /* SceneDelegate.swift in Sources */,
+				5E67C7292978966600030584 /* TaskData+CoreDataProperties.swift in Sources */,
 				5E0D9B2A29758F4200CE562B /* Helper.swift in Sources */,
 				5E02E9AF2976C3F400049146 /* RestaurantTableViewCell.swift in Sources */,
 				5E0D9B39297596DF00CE562B /* LoginData+CoreDataClass.swift in Sources */,
@@ -400,6 +469,7 @@
 		};
 		5E0D9B2329758C3400CE562B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E44C63B590F9A758E2427755 /* Pods-IOSDemoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -428,6 +498,7 @@
 		};
 		5E0D9B2429758C3400CE562B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 297B626B01ACD7CD29EB821B /* Pods-IOSDemoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
