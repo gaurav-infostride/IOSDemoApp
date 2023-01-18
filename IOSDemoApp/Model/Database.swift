@@ -1,20 +1,13 @@
 //
-//  Helper.swift
+//  Database.swift
 //  IOSDemoApp
 //
-//  Created by Gaurav Kumar on 16/01/23.
+//  Created by Gaurav Kumar on 17/01/23.
 //
 
 import Foundation
 import UIKit
 import CoreData
-
-struct k{
-    struct Segue {
-        static let loginVCSegue = "loginVCSegue"
-    }
-    
-}
 
 class DatabaseHelper{
     
@@ -51,5 +44,6 @@ class DatabaseHelper{
     
 
 }
+
 
 

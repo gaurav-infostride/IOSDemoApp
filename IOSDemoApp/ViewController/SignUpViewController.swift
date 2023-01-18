@@ -23,19 +23,19 @@ class SignUpViewController: UIViewController {
     
     @IBAction func onSignUp(_ sender: Any) {
         guard nameTF.text != "" else {
-        print("Enter Full Name")
+            showAlert(message: "Enter Full Name")
             return
         }
         guard passwordTF.text != "" else {
-        print("Enter password")
+            showAlert(message: "Enter password")
             return
         }
         guard confirmPasswordTF.text != "" else {
-        print("Enter confirm passwordTF")
+            showAlert(message: "Enter confirm password")
             return
         }
         guard passwordTF.text == confirmPasswordTF.text else {
-        print("Password do not match confirm password")
+            showAlert(message: "Password do not match with confirm password")
             return
         }
         
