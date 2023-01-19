@@ -21,6 +21,8 @@ class RestaurantViewController: UIViewController {
         restaurantTableView.delegate = self
         viewModel.getrestaurantDetails(){
 //            print(self.viewModel.restaurantData)
+            
+            
             self.restaurantTableView.reloadData()
             
         }
@@ -53,10 +55,12 @@ extension RestaurantViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = restaurantTableView.dequeueReusableCell(withIdentifier: k.Cell.restaurantTableViewCell, for: indexPath) as! RestaurantTableViewCell
-   
         let url = URL(string: viewModel.restaurantData[indexPath.row].logo!)
+        print("URL", url)
+
             // this downloads the image asynchronously if it's not cached yet
-            cell.logoImageView.kf.setImage(with: url)
+        cell.logoImageView.kf.setImage(with: url, options: [.forceRefresh])
+
         
 //        }else{
 //            print("Image String not available")
