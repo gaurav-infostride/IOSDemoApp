@@ -131,11 +131,12 @@
                         <outlet property="idTF" destination="Esq-JF-qCF" id="NNP-Cl-xW6"/>
                         <outlet property="nameTF" destination="38p-td-jsO" id="IJl-E5-ODT"/>
                         <outlet property="passwordTF" destination="r3Y-Ln-gOX" id="NCt-ij-EY0"/>
+                        <segue destination="nfR-e6-tUT" kind="show" identifier="loginVCSegue" id="XHp-K1-4YD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2382.4427480916029" y="-19.014084507042256"/>
+            <point key="canvasLocation" x="2324" y="350"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="lYa-hX-5hm">
@@ -201,6 +202,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="onLogin:" destination="Gdk-Fb-VRa" eventType="touchUpInside" id="O8I-T4-z2E"/>
                                     <action selector="onSignUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I4Z-bs-FbA"/>
                                     <segue destination="nfR-e6-tUT" kind="show" id="MBG-80-S7t"/>
                                 </connections>
@@ -217,10 +219,14 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="x3W-pv-2mY"/>
+                    <connections>
+                        <outlet property="loginIdTF" destination="36d-hf-xT0" id="QBN-Vl-RCm"/>
+                        <outlet property="passwordTF" destination="cQj-A4-kZ4" id="748-Jy-p2H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6FB-a2-sly" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3097" y="-30"/>
+            <point key="canvasLocation" x="2888" y="-418"/>
         </scene>
         <!--Restaurant View Controller-->
         <scene sceneID="hJf-X4-uug">
@@ -418,6 +424,9 @@
             <point key="canvasLocation" x="730.53435114503816" y="-35.211267605633807"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="MBG-80-S7t"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="brain.head.profile" catalog="system" width="120" height="128"/>
         <systemColor name="systemBackgroundColor">

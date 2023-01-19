@@ -29,16 +29,35 @@ class DatabaseHelper{
         }
     }
 
-     func getLoginData()-> [LoginData]{
-        let loginDataArr = [LoginData]()
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "LoginData")
+    func getLoginData(username: String, password: String)-> LoginData?{
+         
+         
+         let username = username
+         let usernamePredicate = NSPredicate(format: "id = %@", username)
+         let usernameFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "LoginData")
+        usernameFetchRequest.predicate = usernamePredicate
+         
         do{
-            try context.save()
-            print("Data is saved")
-        }catch{
-            print("Data not saved")
+            let fetchedResults = try context.fetch(usernameFetchRequest)
+            print("Fetch results")
+            if let task = fetchedResults.first as? LoginData {
+                if task.password == password {
+                    return task
+                } else {
+                    return nil
+                }
+                
+                
+            } else {
+                print("No data found")
+            }
+                              
+            //  try context.save()
+                    
+        }catch let err{
+            print("Error in updating",err)
         }
-        return loginDataArr
+        return nil
     }
     
     

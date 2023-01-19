@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 typealias Restaurants = [Restaurant]
 
@@ -19,6 +19,7 @@ struct Restaurant: Codable {
     let logo: String?
     let phoneNumber, address: String?
     let hours: DailyWorkTime?
+    var image = UIImageView()
 
     enum CodingKeys: String, CodingKey {
         case id, uid, name, type, description, review, logo
