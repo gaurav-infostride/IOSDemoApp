@@ -10,12 +10,12 @@ import UIKit
 import CoreData
 
 class DatabaseHelper{
-    
+    ///Variable
     static let sharedInstance = DatabaseHelper()
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
     
-     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-
-
+    ///function to save data in core database
      func saveLoginData(obj:[String:String?]){
         let loginData = NSEntityDescription.insertNewObject(forEntityName: "LoginData", into: context) as! LoginData
         loginData.fullname = obj["fullname"] as? String
@@ -28,15 +28,12 @@ class DatabaseHelper{
             print("Data not saved")
         }
     }
-
+    ///function to get data from core database
     func getLoginData(username: String, password: String)-> LoginData?{
-         
-         
          let username = username
          let usernamePredicate = NSPredicate(format: "id = %@", username)
          let usernameFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "LoginData")
         usernameFetchRequest.predicate = usernamePredicate
-         
         do{
             let fetchedResults = try context.fetch(usernameFetchRequest)
             print("Fetch results")
@@ -46,22 +43,15 @@ class DatabaseHelper{
                 } else {
                     return nil
                 }
-                
-                
             } else {
                 print("No data found")
             }
-                              
             //  try context.save()
-                    
         }catch let err{
             print("Error in updating",err)
         }
         return nil
     }
-    
-    
-
 }
 
 

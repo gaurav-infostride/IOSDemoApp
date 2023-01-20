@@ -5,11 +5,12 @@
 //  Created by Gaurav Kumar on 17/01/23.
 //
 
-import Foundation
+//import Foundation
 import Kingfisher
 
 class RestaurantViewModel{
     
+
     static let instance = RestaurantViewModel()
     var restaurantData: Restaurants = []
     
@@ -30,11 +31,6 @@ class RestaurantViewModel{
                     let restaurant = try JSONDecoder().decode(Restaurants.self, from: data)
                     DispatchQueue.main.async {
                         self.restaurantData = restaurant
-                        
-                        //                        restaurantData.forEach { restaurant in
-                        ////                            restaurant.image.kf.setImage(with: restaurant.logo, options: [.forceRefresh])
-                        //                            restaurant.image.kf.setImage(with: restaurant.logo, options: [.forceRefresh])
-                        //                        }
                         completion()
                     }
 

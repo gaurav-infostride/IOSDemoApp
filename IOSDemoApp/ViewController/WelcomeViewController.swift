@@ -9,22 +9,12 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    
+    ///IB Outlets
     @IBOutlet weak var welcomeLbl: UILabel!
     
+    ///ViewDidLoad Method of View Controller Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        welcomeLbl.text = ""
-        let welcomeText = "IOS Dummy App"
-        var charIndex = 0.0
-        for i in welcomeText{
-            Timer.scheduledTimer(withTimeInterval: 1 * charIndex, repeats: false){(timer) in
-//                self.welcomeLbl.text?.append(i)
-                
-            }
-            charIndex = +1
-            
-        }
         
     }
     
