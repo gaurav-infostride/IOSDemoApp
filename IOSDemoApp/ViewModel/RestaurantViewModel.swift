@@ -18,6 +18,7 @@ class RestaurantViewModel{
         let url = URL(string: urlString)
         guard let url = url else {return}
         
+        
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil else {
                 print(error?.localizedDescription ?? "")
@@ -28,16 +29,40 @@ class RestaurantViewModel{
                 do{
                     //Here we will decode with a type that is an array<Restaurant>
                     let restaurant = try JSONDecoder().decode(Restaurants.self, from: data)
-                    DispatchQueue.main.async {
-                        self.restaurantData = restaurant
+                    self.restaurantData = restaurant
+                    var imagesLoaded = 0
+                    for i in 0..<self.restaurantData.count {
                         
-                        //                        restaurantData.forEach { restaurant in
-                        ////                            restaurant.image.kf.setImage(with: restaurant.logo, options: [.forceRefresh])
-                        //                            restaurant.image.kf.setImage(with: restaurant.logo, options: [.forceRefresh])
-                        //                        }
-                        completion()
+                        if let url = URL(string: self.restaurantData[i].logo ?? "") {
+                            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                                guard let data = data, error == nil else { return }
+                                imagesLoaded += 1
+                                self.restaurantData[i].image = UIImage(data: data) ?? UIImage()
+                                
+                                if imagesLoaded == self.restaurantData.count {
+                                    completion()
+                                }
+                             
+                            }
+                            
+                            task.resume()
+                        }
+                        
+//                        if let url = URL(string: self.restaurantData[i].logo ?? "") {
+//
+//                            self.dowloadImage(from: url) { image in
+//                                self.restaurantData[i].image = image
+//                                imagesLoaded += 1
+//                                if imagesLoaded == self.restaurantData.count {
+//                                    DispatchQueue.main.async {
+//                                        completion()
+//                                    }
+//
+//                                }
+//                            }
+//                        }
                     }
-
+                    
                     
                 }catch let e{
                     print(e)
@@ -49,8 +74,5 @@ class RestaurantViewModel{
         }.resume()
         
     }
-    
-    
-    
     
 }

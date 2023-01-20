@@ -8,6 +8,6 @@
 import Foundation
 
 struct UserModel {
-    var FullName: String?
+    var fullName: String?
     var id: String?
 }
