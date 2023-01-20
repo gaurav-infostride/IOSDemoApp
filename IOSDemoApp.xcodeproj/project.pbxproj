@@ -24,6 +24,7 @@
 		5E0D9B39297596DF00CE562B /* LoginData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0D9B37297596DF00CE562B /* LoginData+CoreDataClass.swift */; };
 		5E0D9B3A297596DF00CE562B /* LoginData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0D9B38297596DF00CE562B /* LoginData+CoreDataProperties.swift */; };
 		5E0D9B3C2975975400CE562B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0D9B3B2975975400CE562B /* SignUpViewController.swift */; };
+		5E5870802979CFC300E7D21E /* RestaurantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58707F2979CFC300E7D21E /* RestaurantDetailsViewController.swift */; };
 		5E67C7282978966600030584 /* TaskData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67C7262978966600030584 /* TaskData+CoreDataClass.swift */; };
 		5E67C7292978966600030584 /* TaskData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67C7272978966600030584 /* TaskData+CoreDataProperties.swift */; };
 		5E6B0DEA2975BD7600EB7023 /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B0DE92975BD7600EB7023 /* UIViewController+Ex.swift */; };
@@ -53,6 +54,7 @@
 		5E0D9B37297596DF00CE562B /* LoginData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5E0D9B38297596DF00CE562B /* LoginData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5E0D9B3B2975975400CE562B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5E58707F2979CFC300E7D21E /* RestaurantDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsViewController.swift; sourceTree = "<group>"; };
 		5E67C7262978966600030584 /* TaskData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5E67C7272978966600030584 /* TaskData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5E6B0DE92975BD7600EB7023 /* UIViewController+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				5E0D9B3B2975975400CE562B /* SignUpViewController.swift */,
 				5E6B0DEC2975E1D000EB7023 /* WelcomeViewController.swift */,
 				5E02E9A12976B35E00049146 /* RestaurantViewController.swift */,
+				5E58707F2979CFC300E7D21E /* RestaurantDetailsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			files = (
 				5E0D9B362975942000CE562B /* LoginViewController.swift in Sources */,
 				5E02E9A82976B67B00049146 /* RestaurantModel.swift in Sources */,
+				5E5870802979CFC300E7D21E /* RestaurantDetailsViewController.swift in Sources */,
 				5E02E9A62976B65700049146 /* RestaurantViewModel.swift in Sources */,
 				5E6B0DED2975E1D000EB7023 /* WelcomeViewController.swift in Sources */,
 				5E6B0DEA2975BD7600EB7023 /* UIViewController+Ex.swift in Sources */,

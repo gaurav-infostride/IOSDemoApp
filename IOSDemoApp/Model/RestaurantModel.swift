@@ -19,7 +19,7 @@ struct Restaurant: Codable {
     let logo: String?
     let phoneNumber, address: String?
     let hours: DailyWorkTime?
-    var image = UIImageView()
+//    var image = UIImageView()
 
     enum CodingKeys: String, CodingKey {
         case id, uid, name, type, description, review, logo

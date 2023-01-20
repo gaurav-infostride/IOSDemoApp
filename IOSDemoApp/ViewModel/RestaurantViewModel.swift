@@ -28,14 +28,15 @@ class RestaurantViewModel{
                 do{
                     //Here we will decode with a type that is an array<Restaurant>
                     let restaurant = try JSONDecoder().decode(Restaurants.self, from: data)
-                        
+                    DispatchQueue.main.async {
                         self.restaurantData = restaurant
                         
-                        restaurantData.forEach { restaurant in
-//                            restaurant.image.kf.setImage(with: restaurant.logo, options: [.forceRefresh])
-                            restaurant.image.kf.setImage(with: restaurant.logo, options: [.forceRefresh])
-                        }
+                        //                        restaurantData.forEach { restaurant in
+                        ////                            restaurant.image.kf.setImage(with: restaurant.logo, options: [.forceRefresh])
+                        //                            restaurant.image.kf.setImage(with: restaurant.logo, options: [.forceRefresh])
+                        //                        }
                         completion()
+                    }
 
                     
                 }catch let e{
