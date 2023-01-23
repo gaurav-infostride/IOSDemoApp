@@ -24,10 +24,7 @@
 		5E0D9B39297596DF00CE562B /* LoginData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0D9B37297596DF00CE562B /* LoginData+CoreDataClass.swift */; };
 		5E0D9B3A297596DF00CE562B /* LoginData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0D9B38297596DF00CE562B /* LoginData+CoreDataProperties.swift */; };
 		5E0D9B3C2975975400CE562B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E0D9B3B2975975400CE562B /* SignUpViewController.swift */; };
-
 		5E5870802979CFC300E7D21E /* RestaurantDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E58707F2979CFC300E7D21E /* RestaurantDetailsViewController.swift */; };
-		5E67C7282978966600030584 /* TaskData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67C7262978966600030584 /* TaskData+CoreDataClass.swift */; };
-		5E67C7292978966600030584 /* TaskData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E67C7272978966600030584 /* TaskData+CoreDataProperties.swift */; };
 		5E6B0DEA2975BD7600EB7023 /* UIViewController+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B0DE92975BD7600EB7023 /* UIViewController+Ex.swift */; };
 		5E6B0DED2975E1D000EB7023 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B0DEC2975E1D000EB7023 /* WelcomeViewController.swift */; };
 		7FE39E8B75714DD17F2E215D /* Pods_IOSDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F70F2363927547F25D6052 /* Pods_IOSDemoApp.framework */; };
@@ -56,10 +53,7 @@
 		5E0D9B37297596DF00CE562B /* LoginData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginData+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5E0D9B38297596DF00CE562B /* LoginData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5E0D9B3B2975975400CE562B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-
 		5E58707F2979CFC300E7D21E /* RestaurantDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailsViewController.swift; sourceTree = "<group>"; };
-		5E67C7262978966600030584 /* TaskData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskData+CoreDataClass.swift"; sourceTree = "<group>"; };
-		5E67C7272978966600030584 /* TaskData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TaskData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5E6B0DE92975BD7600EB7023 /* UIViewController+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ex.swift"; sourceTree = "<group>"; };
 		5E6B0DEC2975E1D000EB7023 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		63F70F2363927547F25D6052 /* Pods_IOSDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,8 +121,8 @@
 		5E0D9B0D29758C3300CE562B /* IOSDemoApp */ = {
 			isa = PBXGroup;
 			children = (
+				B62DE0F8297E9D4C00723CE7 /* Utils */,
 				B62DE0F7297E7BA500723CE7 /* Storyboard */,
-				5E0D9B2929758F4200CE562B /* Helper.swift */,
 				5E0D9B2F297591EA00CE562B /* CoreData */,
 				5E6B0DEB2975BD7E00EB7023 /* Extension */,
 				5E0D9B33297593E100CE562B /* Delegate */,
@@ -210,6 +204,14 @@
 				5E0D9B1C29758C3400CE562B /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B62DE0F8297E9D4C00723CE7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D9B2929758F4200CE562B /* Helper.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

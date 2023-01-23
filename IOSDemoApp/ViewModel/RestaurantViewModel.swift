@@ -47,20 +47,6 @@ class RestaurantViewModel{
                             
                             task.resume()
                         }
-                        
-//                        if let url = URL(string: self.restaurantData[i].logo ?? "") {
-//
-//                            self.dowloadImage(from: url) { image in
-//                                self.restaurantData[i].image = image
-//                                imagesLoaded += 1
-//                                if imagesLoaded == self.restaurantData.count {
-//                                    DispatchQueue.main.async {
-//                                        completion()
-//                                    }
-//
-//                                }
-//                            }
-//                        }
                     }
                     
                     

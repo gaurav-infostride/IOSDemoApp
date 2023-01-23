@@ -44,12 +44,12 @@ extension RestaurantViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = restaurantTableView.dequeueReusableCell(withIdentifier: k.Cell.restaurantTableViewCell, for: indexPath) as! RestaurantTableViewCell
+        let cell = restaurantTableView.dequeueReusableCell(withIdentifier: Helper.Cell.restaurantTableViewCell, for: indexPath) as! RestaurantTableViewCell
         
         let image = viewModel.restaurantData[indexPath.row].image
         print("Image size ->", image.size)
         cell.imageView?.image = viewModel.restaurantData[indexPath.row].image
-        cell.imageView?.contentMode = .scaleAspectFit
+       // cell.imageView?.contentMode = .scaleAspectFit
         
         
         cell.nameLbl.text = viewModel.restaurantData[indexPath.row].name
