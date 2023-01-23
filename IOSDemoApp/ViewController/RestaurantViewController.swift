@@ -52,29 +52,13 @@ extension RestaurantViewController : UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = restaurantTableView.dequeueReusableCell(withIdentifier: k.Cell.restaurantTableViewCell, for: indexPath) as! RestaurantTableViewCell
+        let cell = restaurantTableView.dequeueReusableCell(withIdentifier: Helper.Cell.restaurantTableViewCell, for: indexPath) as! RestaurantTableViewCell
    
         let url = URL(string: viewModel.restaurantData[indexPath.row].logo!)
-            // this downloads the image asynchronously if it's not cached yet
             cell.logoImageView.kf.setImage(with: url)
-        
-//        }else{
-//            print("Image String not available")
-//        }
         cell.nameLbl.text = viewModel.restaurantData[indexPath.row].name
         cell.typeLbl.text = viewModel.restaurantData[indexPath.row].type
         cell.contactLbl.text = viewModel.restaurantData[indexPath.row].phoneNumber
-//        if viewModel.restaurantData[indexPath.row].hours?.monday?.isClosed == true{
-//            cell.statusLbl.text = "Online"
-//            if #available(iOS 15.0, *) {
-//                cell.statusLbl.textColor = .systemMint
-//            } else {
-//                cell.statusLbl.textColor = .blue
-//            }
-//        }else{
-//            cell.statusLbl.text = "Online"
-//            cell.statusLbl.textColor = .red
-//        }
         
         
         return cell

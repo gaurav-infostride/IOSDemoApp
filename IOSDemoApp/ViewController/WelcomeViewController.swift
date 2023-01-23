@@ -15,7 +15,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLbl.text = ""
-        let welcomeText = "IOS Dummy App"
+        let welcomeText = Helper.welcomeMessage
         var charIndex = 0.0
         for i in welcomeText{
             Timer.scheduledTimer(withTimeInterval: 1 * charIndex, repeats: false){(timer) in

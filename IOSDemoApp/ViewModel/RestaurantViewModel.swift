@@ -13,7 +13,7 @@ class RestaurantViewModel{
     var restaurantData: Restaurants = []
     
     func getrestaurantDetails(perPage:Int = 10,completion:@escaping() -> ()?){
-        let urlString = "https://random-data-api.com/api/restaurant/random_restaurant?size=\(perPage)"
+        let urlString = "\(Helper.BaseUrl)/restaurant/random_restaurant?size=\(perPage)"
         let url = URL(string: urlString)
         guard let url = url else {return}
         
