@@ -13,7 +13,7 @@ import CoreData
 extension LoginData {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<LoginData> {
-        return NSFetchRequest<LoginData>(entityName: "LoginData")
+        return NSFetchRequest<LoginData>(entityName: Helper.CoreDataEntity.loginData)
     }
 
     @NSManaged public var fullname: String?

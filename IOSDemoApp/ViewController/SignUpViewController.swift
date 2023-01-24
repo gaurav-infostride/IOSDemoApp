@@ -23,26 +23,26 @@ class SignUpViewController: UIViewController {
     
     @IBAction func onSignUp(_ sender: Any) {
         guard nameTF.text != "" else {
-            showAlert(message: "Enter Full Name")
+            showAlert(message: Helper.kValidationMessage.enterName)
             return
         }
         guard passwordTF.text != "" else {
-            showAlert(message: "Enter password")
+            showAlert(message: Helper.kValidationMessage.enterPassword)
             return
         }
         guard confirmPasswordTF.text != "" else {
-            showAlert(message: "Enter confirm password")
+            showAlert(message: Helper.kValidationMessage.enterConfirmPassword)
             return
         }
         guard passwordTF.text == confirmPasswordTF.text else {
-            showAlert(message: "Password do not match with confirm password")
+            showAlert(message: Helper.kValidationMessage.PasswordNotMatched)
             return
         }
         
-        let loginDataDict:[String:String?] = ["fullname":nameTF.text,"id":idTF.text,"password":passwordTF.text ]
+        let loginDataDict:[String:String?] = [Helper.CoreDataAttributes.fullName:nameTF.text,Helper.CoreDataAttributes.id:idTF.text,Helper.CoreDataAttributes.password:passwordTF.text ]
         DatabaseHelper.sharedInstance.saveLoginData(obj: loginDataDict)
         
-        performSegue(withIdentifier: k.Segue.loginVCSegue, sender: self)
+        performSegue(withIdentifier: Helper.Segue.loginVCSegue, sender: self)
     }
     
 }
