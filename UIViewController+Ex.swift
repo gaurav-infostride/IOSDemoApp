@@ -11,9 +11,8 @@ import UIKit
 
 ///extension UIViewController to extend its thefunctionality
 extension  UIViewController {
-    
-    ///creating showallert function using UIAlertController with default style
-    func showAlert(title:String = "IOSDemoApp", message:String?){
+
+    func showAlert(title:String = k.appName, message:String?){
         let allertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "Ok", style: .default) { (action) in
         }
@@ -21,8 +20,9 @@ extension  UIViewController {
         present(allertController, animated: true)
     }
     
-    ///creating showallert function using UIAlertController with destructive style
-    func showActionAlert(title:String = "IOS Demo App", message:String?){
+
+    
+    func showActionAlert(title:String = k.appName, message:String?){
         let allertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "Yes", style: .destructive) { (action) in
         }

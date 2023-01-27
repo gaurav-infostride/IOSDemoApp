@@ -6,9 +6,22 @@
 //
 
 import Foundation
-///creatinf app constant for convient using name instead of directly using strings which sometimes led to spelling mistakes and even crashes
 struct k{
-    ///constants segue names
+    static let appName = "IOS Demo App"
+    static let taskDataEntityName = "TaskData"
+    static let loginDataEntityName = "LoginData"
+    
+    struct message {
+        static let enterFullName = "Enter Full Name"
+        static let enterPassword = "Enter password"
+        static let enterConfirmPassword = "Enter confirm password"
+        static let passwordDoNotMatch = "Password do not match with confirm password"
+//        static let enterFullName = "Enter Full Name"
+//        static let enterFullName = "Enter Full Name"
+//        static let enterFullName = "Enter Full Name"
+    }
+    
+    
     struct Segue {
         static let loginVCSegue = "loginVCSegue"
     }

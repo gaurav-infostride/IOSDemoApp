@@ -25,25 +25,25 @@ class SignUpViewController: UIViewController {
     @IBAction func onSignUp(_ sender: Any) {
         ///Guarding Name Textfield aginst empty string value
         guard nameTF.text != "" else {
-            showAlert(message: "Enter Full Name")
+            showAlert(message: k.message.enterFullName)
             return
         }
         
         ///Guarding Password Textfield aginst empty string value
         guard passwordTF.text != "" else {
-            showAlert(message: "Enter password")
+            showAlert(message: k.message.enterPassword)
             return
         }
         
         ///Guarding ConfirmPassword Textfield aginst empty string value
         guard confirmPasswordTF.text != "" else {
-            showAlert(message: "Enter confirm password")
+            showAlert(message: k.message.enterConfirmPassword)
             return
         }
         
         ///Guarding Password Textfield  text is egual to ConfirmPassword Textfield text
         guard passwordTF.text == confirmPasswordTF.text else {
-            showAlert(message: "Password do not match with confirm password")
+            showAlert(message: k.message.passwordDoNotMatch)
             return
         }
         
