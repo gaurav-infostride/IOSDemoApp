@@ -29,6 +29,7 @@
 		5E6B0DED2975E1D000EB7023 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B0DEC2975E1D000EB7023 /* WelcomeViewController.swift */; };
 		7FE39E8B75714DD17F2E215D /* Pods_IOSDemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63F70F2363927547F25D6052 /* Pods_IOSDemoApp.framework */; };
 		8F7E9A52297998E70045B39A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F7E9A51297998E70045B39A /* UserModel.swift */; };
+		8FF8EF89297AD6A6000236F6 /* UIView+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FF8EF88297AD6A6000236F6 /* UIView+Ex.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		5E6B0DEC2975E1D000EB7023 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		63F70F2363927547F25D6052 /* Pods_IOSDemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSDemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F7E9A51297998E70045B39A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		8FF8EF88297AD6A6000236F6 /* UIView+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ex.swift"; sourceTree = "<group>"; };
 		E44C63B590F9A758E2427755 /* Pods-IOSDemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSDemoApp.debug.xcconfig"; path = "Target Support Files/Pods-IOSDemoApp/Pods-IOSDemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,18 +121,14 @@
 		5E0D9B0D29758C3300CE562B /* IOSDemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				5E0D9B33297593E100CE562B /* Delegate */,
-				5E0D9B2929758F4200CE562B /* Helper.swift */,
-				5E02E9AC2976B6D700049146 /* Database.swift */,
+				B62DE0F8297E9D4C00723CE7 /* Utils */,
+				B62DE0F7297E7BA500723CE7 /* Storyboard */,
 				5E0D9B2F297591EA00CE562B /* CoreData */,
 				5E6B0DEB2975BD7E00EB7023 /* Extension */,
 				5E02E9A92976B68100049146 /* Model */,
 				5E02E9AA2976B68B00049146 /* ViewModel */,
 				5E0D9B34297593F300CE562B /* ViewController */,
 				5E02E9B02976C3FC00049146 /* TableViewCell */,
-				5E0D9B1429758C3300CE562B /* Main.storyboard */,
-				5E0D9B1A29758C3400CE562B /* Assets.xcassets */,
-				5E0D9B1C29758C3400CE562B /* LaunchScreen.storyboard */,
 				5E0D9B1F29758C3400CE562B /* Info.plist */,
 				5E0D9B1729758C3300CE562B /* IOSDemoApp.xcdatamodeld */,
 			);
@@ -140,6 +138,8 @@
 		5E0D9B2F297591EA00CE562B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+
+				5E02E9AC2976B6D700049146 /* Database.swift */,
 				5E0D9B37297596DF00CE562B /* LoginData+CoreDataClass.swift */,
 				5E0D9B38297596DF00CE562B /* LoginData+CoreDataProperties.swift */,
 			);
@@ -181,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				5E6B0DE92975BD7600EB7023 /* UIViewController+Ex.swift */,
+				8FF8EF88297AD6A6000236F6 /* UIView+Ex.swift */,
 			);
 			name = Extension;
 			path = ..;
@@ -193,6 +194,24 @@
 				297B626B01ACD7CD29EB821B /* Pods-IOSDemoApp.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B62DE0F7297E7BA500723CE7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D9B1429758C3300CE562B /* Main.storyboard */,
+				5E0D9B1A29758C3400CE562B /* Assets.xcassets */,
+				5E0D9B1C29758C3400CE562B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		B62DE0F8297E9D4C00723CE7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5E0D9B2929758F4200CE562B /* Helper.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +346,7 @@
 				5E02E9AD2976B6D700049146 /* Database.swift in Sources */,
 				8F7E9A52297998E70045B39A /* UserModel.swift in Sources */,
 				5E0D9B3A297596DF00CE562B /* LoginData+CoreDataProperties.swift in Sources */,
+				8FF8EF89297AD6A6000236F6 /* UIView+Ex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

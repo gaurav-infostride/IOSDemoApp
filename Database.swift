@@ -17,22 +17,22 @@ class DatabaseHelper{
     
     ///function to save data in core database
      func saveLoginData(obj:[String:String?]){
-        let loginData = NSEntityDescription.insertNewObject(forEntityName: "LoginData", into: context) as! LoginData
-        loginData.fullname = obj["fullname"] as? String
-        loginData.id = obj["id"] as? String
-        loginData.password = obj["password"] as? String
+        let loginData = NSEntityDescription.insertNewObject(forEntityName: Helper.CoreDataEntity.loginData, into: context) as! LoginData
+         loginData.fullname = obj[Helper.CoreDataAttributes.fullName] as? String
+        loginData.id = obj[Helper.CoreDataAttributes.id] as? String
+        loginData.password = obj[Helper.CoreDataAttributes.password] as? String
         do{
             try context.save()
-            print("Data is saved")
+            print(Helper.kSuccessMessage.kDataSaved)
         }catch{
-            print("Data not saved")
+            print(Helper.kFailureMessage.kDataNotSaved)
         }
     }
-    ///function to get data from core database
+
     func getLoginData(username: String, password: String)-> LoginData?{
          let username = username
          let usernamePredicate = NSPredicate(format: "id = %@", username)
-         let usernameFetchRequest = NSFetchRequest<NSManagedObject>(entityName: "LoginData")
+         let usernameFetchRequest = NSFetchRequest<NSManagedObject>(entityName: Helper.CoreDataEntity.loginData)
         usernameFetchRequest.predicate = usernamePredicate
         do{
             let fetchedResults = try context.fetch(usernameFetchRequest)
@@ -44,7 +44,7 @@ class DatabaseHelper{
                     return nil
                 }
             } else {
-                print("No data found")
+                print(Helper.kFailureMessage.kDataNotSaved)
             }
             //  try context.save()
         }catch let err{

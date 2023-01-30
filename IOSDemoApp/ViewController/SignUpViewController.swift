@@ -25,39 +25,26 @@ class SignUpViewController: UIViewController {
     @IBAction func onSignUp(_ sender: Any) {
         ///Guarding Name Textfield aginst empty string value
         guard nameTF.text != "" else {
-            showAlert(message: k.message.enterFullName)
+            showAlert(message: Helper.kValidationMessage.enterName)
             return
         }
-        
-        ///Guarding Password Textfield aginst empty string value
         guard passwordTF.text != "" else {
-            showAlert(message: k.message.enterPassword)
+            showAlert(message: Helper.kValidationMessage.enterPassword)
             return
         }
-        
-        ///Guarding ConfirmPassword Textfield aginst empty string value
         guard confirmPasswordTF.text != "" else {
-            showAlert(message: k.message.enterConfirmPassword)
+            showAlert(message: Helper.kValidationMessage.enterConfirmPassword)
             return
         }
-        
-        ///Guarding Password Textfield  text is egual to ConfirmPassword Textfield text
         guard passwordTF.text == confirmPasswordTF.text else {
-            showAlert(message: k.message.passwordDoNotMatch)
+            showAlert(message: Helper.kValidationMessage.PasswordNotMatched)
             return
         }
         
-
-        ///creating a constant Dictionary for saving data in core database
-        let loginDataDict:[String:String?] = ["fullname":nameTF.text,"id":idTF.text,"password":passwordTF.text ]
-        ///saving user data in core datababse using saveLoginData function by basing above dictionary in paraeter
+        let loginDataDict:[String:String?] = [Helper.CoreDataAttributes.fullName:nameTF.text,Helper.CoreDataAttributes.id:idTF.text,Helper.CoreDataAttributes.password:passwordTF.text ]
         DatabaseHelper.sharedInstance.saveLoginData(obj: loginDataDict)
         
-        ///performSegue on main thread DispatchQueue.main.async method UI Work should always be done on main threads only
-        DispatchQueue.main.async {
-            self.performSegue(withIdentifier: k.Segue.loginVCSegue, sender: self)
-        }
-        
+        performSegue(withIdentifier: Helper.Segue.loginVCSegue, sender: self)
     }
     
 }

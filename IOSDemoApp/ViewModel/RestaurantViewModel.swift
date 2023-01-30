@@ -15,9 +15,10 @@ class RestaurantViewModel{
     var restaurantData: Restaurants = []
     
     func getrestaurantDetails(perPage:Int = 10,completion:@escaping() -> ()?){
-        let urlString = "https://random-data-api.com/api/restaurant/random_restaurant?size=\(perPage)"
+        let urlString = "\(Helper.BaseUrl)/restaurant/random_restaurant?size=\(perPage)"
         let url = URL(string: urlString)
         guard let url = url else {return}
+        
         
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard error == nil else {
@@ -29,11 +30,26 @@ class RestaurantViewModel{
                 do{
                     //Here we will decode with a type that is an array<Restaurant>
                     let restaurant = try JSONDecoder().decode(Restaurants.self, from: data)
-                    DispatchQueue.main.async {
-                        self.restaurantData = restaurant
-                        completion()
+                    self.restaurantData = restaurant
+                    var imagesLoaded = 0
+                    for i in 0..<self.restaurantData.count {
+                        
+                        if let url = URL(string: self.restaurantData[i].logo ?? "") {
+                            let task = URLSession.shared.dataTask(with: url) { data, response, error in
+                                guard let data = data, error == nil else { return }
+                                imagesLoaded += 1
+                                self.restaurantData[i].image = UIImage(data: data) ?? UIImage()
+                                
+                                if imagesLoaded == self.restaurantData.count {
+                                    completion()
+                                }
+                             
+                            }
+                            
+                            task.resume()
+                        }
                     }
-
+                    
                     
                 }catch let e{
                     print(e)
@@ -45,8 +61,5 @@ class RestaurantViewModel{
         }.resume()
         
     }
-    
-    
-    
     
 }

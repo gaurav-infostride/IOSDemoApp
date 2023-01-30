@@ -14,7 +14,7 @@ extension LoginData {
 
     ///func fetchRequest used to fetch data from core database
     @nonobjc public class func fetchRequest() -> NSFetchRequest<LoginData> {
-        return NSFetchRequest<LoginData>(entityName: k.loginDataEntityName)
+        return NSFetchRequest<LoginData>(entityName: Helper.CoreDataEntity.loginData)
     }
     ///Variable
     @NSManaged public var fullname: String?

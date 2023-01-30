@@ -12,9 +12,15 @@ import UIKit
 ///extension UIViewController to extend its thefunctionality
 extension  UIViewController {
 
-    func showAlert(title:String = k.appName, message:String?){
+    func showAlert(title:String = Helper.welcomeMessage, message:String?){
         let allertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let OKAction = UIAlertAction(title: "Ok", style: .default) { (action) in
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+//
+//        }
+//        allertController.addAction(cancelAction)
+        
+        let OKAction = UIAlertAction(title: Helper.alertAction.ok, style: .default) { (action) in
+            
         }
         allertController.addAction(OKAction)
         present(allertController, animated: true)
@@ -22,14 +28,16 @@ extension  UIViewController {
     
 
     
-    func showActionAlert(title:String = k.appName, message:String?){
+    func showActionAlert(title:String = Helper.welcomeMessage, message:String?){
         let allertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let OKAction = UIAlertAction(title: "Yes", style: .destructive) { (action) in
-        }
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        let cancelAction = UIAlertAction(title: Helper.alertAction.Cancel, style: .cancel) { (action) in
 
         }
         allertController.addAction(cancelAction)
+        
+        let OKAction = UIAlertAction(title: Helper.alertAction.yes, style: .destructive) { (action) in
+            
+        }
         allertController.addAction(OKAction)
         present(allertController, animated: true)
     }
