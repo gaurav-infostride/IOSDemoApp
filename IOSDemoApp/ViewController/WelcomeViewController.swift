@@ -9,9 +9,10 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
 
-    
+    ///IB Outlets
     @IBOutlet weak var welcomeLbl: UILabel!
     
+    ///ViewDidLoad Method of View Controller Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLbl.text = ""

@@ -8,7 +8,10 @@
 import Foundation
 import UIKit
 
+
+///extension UIViewController to extend its thefunctionality
 extension  UIViewController {
+
     func showAlert(title:String = Helper.welcomeMessage, message:String?){
         let allertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
 //        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
@@ -20,10 +23,10 @@ extension  UIViewController {
             
         }
         allertController.addAction(OKAction)
-        
         present(allertController, animated: true)
     }
     
+
     
     func showActionAlert(title:String = Helper.welcomeMessage, message:String?){
         let allertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -36,7 +39,6 @@ extension  UIViewController {
             
         }
         allertController.addAction(OKAction)
-        
         present(allertController, animated: true)
     }
     

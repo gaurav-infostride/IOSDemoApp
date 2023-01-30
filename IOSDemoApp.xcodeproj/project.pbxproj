@@ -125,7 +125,6 @@
 				B62DE0F7297E7BA500723CE7 /* Storyboard */,
 				5E0D9B2F297591EA00CE562B /* CoreData */,
 				5E6B0DEB2975BD7E00EB7023 /* Extension */,
-				5E0D9B33297593E100CE562B /* Delegate */,
 				5E02E9A92976B68100049146 /* Model */,
 				5E02E9AA2976B68B00049146 /* ViewModel */,
 				5E0D9B34297593F300CE562B /* ViewController */,
@@ -139,6 +138,7 @@
 		5E0D9B2F297591EA00CE562B /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+
 				5E02E9AC2976B6D700049146 /* Database.swift */,
 				5E0D9B37297596DF00CE562B /* LoginData+CoreDataClass.swift */,
 				5E0D9B38297596DF00CE562B /* LoginData+CoreDataProperties.swift */,

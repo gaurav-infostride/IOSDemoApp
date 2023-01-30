@@ -5,11 +5,12 @@
 //  Created by Gaurav Kumar on 17/01/23.
 //
 
-import Foundation
+//import Foundation
 import Kingfisher
 
 class RestaurantViewModel{
     
+
     static let instance = RestaurantViewModel()
     var restaurantData: Restaurants = []
     

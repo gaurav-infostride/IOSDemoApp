@@ -9,19 +9,21 @@ import UIKit
 
 class SignUpViewController: UIViewController {
 
-    
+    ///IB Outlets
     @IBOutlet weak var nameTF: UITextField!
     @IBOutlet weak var idTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var confirmPasswordTF: UITextField!
     
+    ///ViewDidLoad Method of View Controller Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
 
-    
+    ///IB Actios
     @IBAction func onSignUp(_ sender: Any) {
+        ///Guarding Name Textfield aginst empty string value
         guard nameTF.text != "" else {
             showAlert(message: Helper.kValidationMessage.enterName)
             return
